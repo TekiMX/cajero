@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cajero.css">
+    <title>TU CAJERO ONLINE</title>
+</head>
+
+<body>
+    <header id="headerBox">
+        <h2 id="welcome"></h2>
+        <h3 id="amount"></h3>
+    </header>
+    <div id="asidesBox">
+        <main id="mainBox">
+            <section id="gridBox">
+                <div id="centralBox">
+                    <div id="textCentralBox">
+                        <h2>Realiza tus operaciones</h2>
+                    </div>
+                    <form id="deposit">
+                        <input id="inputDeposit" type="number" placeholder="Monto a depositar">
+                        <button type="submit">Depositar</button>
+                    </form>
+                    <form id="withdraw">
+                        <input id="inputWithdraw" type="number" placeholder="Monto a retirar">
+                        <button type="submit">Retirar</button>
+                    </form>
+                </div>
+                <div id="topLeftBox">
+                    <h3>Deposito de Efectivo</h3>
+                </div>
+                <div id="bottomLeftBox">
+                    <h3>Consulta de Saldo</h3>
+                </div>
+                <div id="topRightBox">
+                    <h3>Promos!</h3>
+                </div>
+                <div id="bottomRightBox">
+                    <h3>Retiro de Efectivo</h3>
+                </div>
+                <div class="rellenoT"></div>
+                <div class="rellenoB"></div>
+            </section>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados </p>
+        </footer>
+    </div>
+    <script src="./cajero.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,515 @@
+[33mcommit eb846588b411990545c4c14c296cb5d823c7954c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Salvador Rodriguez <ale2ph@hotmail.com>
+Date:   Thu Apr 13 11:23:44 2023 -0600
+
+    first commit
+
+[1mdiff --git a/backgroundMattJjones.jpg b/backgroundMattJjones.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..25f6fee[m
+Binary files /dev/null and b/backgroundMattJjones.jpg differ
+[1mdiff --git a/cajero/cajero.css b/cajero/cajero.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ec39281[m
+[1m--- /dev/null[m
+[1m+++ b/cajero/cajero.css[m
+[36m@@ -0,0 +1,184 @@[m
+[32m+[m[32m* {[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    box-sizing: border-box;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    width: 100vw;[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    min-width: 350px;[m
+[32m+[m[32m    background-image: url(./cajeroBackG.jpg);[m
+[32m+[m[32m    background-repeat: no-repeat;[m
+[32m+[m[32m    background-size: cover;[m
+[32m+[m[32m    background-position: center;[m
+[32m+[m[32m    /* border-style: solid;[m
+[32m+[m[32m        border-color: yellow */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#headerBox {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    justify-content: space-around;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    /* flex-basis: 15%; */[m
+[32m+[m[32m    border-radius: 25px;[m
+[32m+[m[32m    border-style: solid;[m
+[32m+[m[32m    border-color: azure;[m
+[32m+[m[32m    background-color: black;[m
+[32m+[m[32m    color: azure;[m
+[32m+[m[32m    font-family: sans-serif;[m
+[32m+[m[32m    font-size: 1.2em;[m
+[32m+[m[32m    padding: 0.4em;[m
+[32m+[m[32m    margin: 0.2em;[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#mainBox {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    /* border-style: solid;[m
+[32m+[m[32m    border-color: red; */[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    height: 80%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#asidesBox{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    height: 100%;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#gridBox {[m
+[32m+[m[32m    display: grid;[m
+[32m+[m[32m    grid-template-columns: 25% 50% 25%;[m
+[32m+[m[32m    grid-template-rows: 25% 50% 25%;[m
+[32m+[m[32m    /* grid-template-areas: "tl top top tr"[m
+[32m+[m[32m                         "l central central r"[m
+[32m+[m[32m                         "l central central r"[m
+[32m+[m[32m                         "bl bot bot br"; */[m
+[32m+[m[32m    /* border-style: solid; */[m
+[32m+[m[32m    /* background-color: gray; */[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    height: 100%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/*Caja central de las operaciones */[m
+[32m+[m[32m#centralBox {[m
+[32m+[m[32m        grid-column: 1 / 4;[m
+[32m+[m[32m        grid-row: 2 / 3;[m
+[32m+[m[32m        display: flex;[m
+[32m+[m[32m        flex-direction: column;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m        justify-content: space-evenly;[m
+[32m+[m[32m        text-align: center;[m
+[32m+[m[32m        font-size: 2em;[m
+[32m+[m[32m        padding: 0.1em;[m
+[32m+[m[32m        background-color: azure;[m
+[32m+[m[32m        border-radius: 20px;[m
+[32m+[m[32m        border-style: solid;[m
+[32m+[m[32m        border-width: 1px 8px 10px 1px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#topLeftBox {[m
+[32m+[m[32m    grid-column: 1 / 2;[m
+[32m+[m[32m    /* background: grey; */[m
+[32m+[m[32m    grid-row: 1 / 2;[m
+[32m+[m[32m    /* border-style: solid;[m
+[32m+[m[32m    border-width: 1px 8px 10px 1px; */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#bottomLeftBox {[m
+[32m+[m[32m    grid-column: 1 / 2;[m
+[32m+[m[32m    /* background: grey; */[m
+[32m+[m[32m    grid-row: 3 / 4;[m
+[32m+[m[32m    /* border-style: solid;[m
+[32m+[m[32m    border-width: 1px 8px 10px 1px; */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#topRightBox {[m
+[32m+[m[32m    grid-column: 3 / 4;[m
+[32m+[m[32m    /* background: grey; */[m
+[32m+[m[32m    grid-row: 1 / 2;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#bottomRightBox {[m
+[32m+[m[32m    grid-column: 3 / 4;[m
+[32m+[m[32m    /* background: grey; */[m
+[32m+[m[32m    grid-row: 3 / 4;[m
+[32m+[m[32m    /* background: grey; */[m
+[32m+[m[32m}[m
+[32m+[m[32m/*[m[41m [m
+[32m+[m[32m.rellenoT{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    height: 80%;[m
+[32m+[m[32m    background-color: gray;[m
+[32m+[m[32m} */[m
+[32m+[m
+[32m+[m[32m[id$="tBox"] {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    padding: 0.1em;[m
+[32m+[m[32m    margin: 5px;[m
+[32m+[m[32m    background: lightgrey;[m
+[32m+[m[32m    border-style: solid;[m
+[32m+[m[32m    border-width: 1px 8px 10px 1px;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m[id$="tBox"] h3{[m
+[32m+[m[32m    /* color: azure; */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfooter p {[m
+[32m+[m[32m    background-color: royalblue;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    padding: 5px;[m
+[32m+[m[32m    margin: 10px;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m    color: azure;[m
+[32m+[m[32m    /* flex-basis: 5% */[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m@media only screen and (max-width: 750px) {[m
+[32m+[m[32m    #mainBox {[m
+[32m+[m[32m        display: flex;[m
+[32m+[m[32m        min-width: 350px;[m
+[32m+[m[32m        /* border-style: solid; */[m
+[32m+[m[32m        /* border-color: red; */[m
+[32m+[m[32m        width: 100%;[m
+[32m+[m[32m        height: 60%;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m    #centralBox {[m
+[32m+[m[32m        grid-column: 2 / 3;[m
+[32m+[m[32m        grid-row: 1 / 4;[m
+[32m+[m[32m        display: flex;[m
+[32m+[m[32m        flex-direction: column;[m
+[32m+[m[32m       /* align-items: center;[m
+[32m+[m[32m        justify-content: space-evenly;[m
+[32m+[m[32m        text-align: center;[m
+[32m+[m[32m        padding: 0.1em; */[m
+[32m+[m[32m        /* font-size: 1.5em; */[m
+[32m+[m[32m        border-style: solid;[m
+[32m+[m[32m}[m
+[32m+[m[32m    #textCentralBox {[m
+[32m+[m[32m        display: flex;[m
+[32m+[m[32m        flex-direction: row;[m
+[32m+[m[32m        flex-basis: 50% ;[m
+[32m+[m[32m        width: 100%;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m        justify-content: space-around;[m
+[32m+[m[32m}[m
+[32m+[m[32m    #textCentralBox h2{[m
+[32m+[m[32m        font-size: 1em;[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/cajero/cajero.html b/cajero/cajero.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..49da1d8[m
+[1m--- /dev/null[m
+[1m+++ b/cajero/cajero.html[m
+[36m@@ -0,0 +1,56 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="./cajero.css">[m
+[32m+[m[32m    <title>TU CAJERO ONLINE</title>[m
+[32m+[m[32m</head>[m
+[32m+[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <header id="headerBox">[m
+[32m+[m[32m        <h2 id="welcome"></h2>[m
+[32m+[m[32m        <h3 id="amount"></h3>[m
+[32m+[m[32m    </header>[m
+[32m+[m[32m    <div id="asidesBox">[m
+[32m+[m[32m        <main id="mainBox">[m
+[32m+[m[32m            <section id="gridBox">[m
+[32m+[m[32m                <div id="centralBox">[m
+[32m+[m[32m                    <div id="textCentralBox">[m
+[32m+[m[32m                        <h2>Realiza tus operaciones</h2>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <form id="deposit">[m
+[32m+[m[32m                        <input id="inputDeposit" type="number" placeholder="Monto a depositar">[m
+[32m+[m[32m                        <button type="submit">Depositar</button>[m
+[32m+[m[32m                    </form>[m
+[32m+[m[32m                    <form id="withdraw">[m
+[32m+[m[32m                        <input id="inputWithdraw" type="number" placeholder="Monto a retirar">[m
+[32m+[m[32m                        <button type="submit">Retirar</button>[m
+[32m+[m[32m                    </form>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div id="topLeftBox">[m
+[32m+[m[32m                    <h3>Deposito de Efectivo</h3>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div id="bottomLeftBox">[m
+[32m+[m[32m                    <h3>Consulta de Saldo</h3>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div id="topRightBox">[m
+[32m+[m[32m                    <h3>Promos!</h3>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div id="bottomRightBox">[m
+[32m+[m[32m                    <h3>Retiro de Efectivo</h3>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div class="rellenoT"></div>[m
+[32m+[m[32m                <div class="rellenoB"></div>[m
+[32m+[m[32m            </section>[m
+[32m+[m[32m        </main>[m
+[32m+[m[32m        <footer>[m
+[32m+[m[32m            <p>Todos los derechos reservados </p>[m
+[32m+[m[32m        </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <script src="./cajero.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/cajero/cajero.js b/cajero/cajero.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7c58b7d[m
+[1m--- /dev/null[m
+[1m+++ b/cajero/cajero.js[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32mconst user = localStorage.getItem("user")[m
+[32m+[m
+[32m+[m[32mconst welcome = document.getElementById("welcome").innerHTML = `Bienvenido a tu cajero online ${user}`[m
+[32m+[m
+[32m+[m[32mconst money = Number(localStorage.getItem("money"))[m
+[32m+[m
+[32m+[m[32mconst amount = document.getElementById("amount").innerHTML = `Tu saldo disponible es: ${money}`[m
+[32m+[m
+[32m+[m[32mfunction cashDeposit(cash) {[m
+[32m+[m[32m    let totalAmount = money + cash[m
+[32m+[m[32m    localStorage.setItem("money", totalAmount)[m
+[32m+[m[32m    amount.innerHTML = `Tu saldo disponible es: ${money}`[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mconst deposito = document.getElementById("deposit")[m
+[32m+[m
+[32m+[m[32mdeposito.addEventListener("submit", (evento) => {[m
+[32m+[m[32m    evento.preventDefault();[m
+[32m+[m[32m    let inputDeposit = Number(document.getElementById("inputDeposit").value)[m
+[32m+[m[32m    cashDeposit(inputDeposit)[m
+[32m+[m[32m})[m
+[32m+[m
+[32m+[m[32mfunction cashWithdraw(cash) {[m
+[32m+[m[32m    amountBelow = money - cash[m
+[32m+[m[32m    if (amountBelow < 0) {[m
+[32m+[m[32m        amount.innerHTML = `Tu saldo no es suficiente`[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m        let totalAmount = money - cash[m
+[32m+[m[32m        localStorage.setItem("money", totalAmount)[m
+[32m+[m[32m        const myTimeout = setTimeout(myAlert, 1000);[m
+[32m+[m[32m        amount.innerHTML = `Tu saldo disponible es: ${money}`;[m
+[32m+[m[32m        alert(`Realizaste un retiro`)[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mconst retiro = document.getElementById("withdraw")[m
+[32m+[m
+[32m+[m[32mretiro.addEventListener("submit", (evento) => {[m
+[32m+[m[32m    evento.preventDefault();[m
+[32m+[m[32m    let inputWithdraw = Number(document.getElementById("inputWithdraw").value)[m
+[32m+[m[32m    cashWithdraw(inputWithdraw)[m
+[32m+[m[32m})[m
+[1mdiff --git a/cajero/cajeroBackG.jpg b/cajero/cajeroBackG.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1c97ed[m
+Binary files /dev/null and b/cajero/cajeroBackG.jpg differ
+[1mdiff --git a/index.css b/index.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0b5c2e0[m
+[1m--- /dev/null[m
+[1m+++ b/index.css[m
+[36m@@ -0,0 +1,98 @@[m
+[32m+[m[32m*{[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    box-sizing: border-box;[m
+[32m+[m[32m    font-family: Arial, Helvetica, sans-serif;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbody{[m
+[32m+[m[32m    width: 100vw;[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    border-spacing: 15px;[m
+[32m+[m[32m    background-repeat: no-repeat;[m
+[32m+[m[32m    background-size: cover;[m
+[32m+[m[32m    background-position: center;[m
+[32m+[m[32m    background-image: url("./backgroundMattJjones.jpg");[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#asidesBox{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    height: 100%;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#headerBox{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    width: auto;[m
+[32m+[m[32m    flex-basis: 10%;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    margin: 55px;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m    background-color: royalblue;[m
+[32m+[m[32m    color: azure;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mmain{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    /* flex-basis: 5%; */[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#principalFormBox{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    justify-content: space-around;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    height: 100%;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    padding: 1em;[m
+[32m+[m[32m    gap: 1em;[m
+[32m+[m[32m    background-color: lightseagreen;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#formInput{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    gap: 1em;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#user{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    border-radius: 15px[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#password{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    border-radius: 15px[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mh1{[m
+[32m+[m[32m    font-family: Verdana, Geneva, Tahoma, sans-serif;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mh2 {[m
+[32m+[m[32m    font-size: 1em;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfooter {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfooter p{[m
+[32m+[m[32m    background-color: lightseagreen;[m
+[32m+[m[32m    margin: 35px;[m
+[32m+[m[32m    border-radius: 15px;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..405de0b[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,45 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="./index.css">[m
+[32m+[m[32m    <title>CAJERO 1.0 DEVF</title>[m
+[32m+[m[32m</head>[m
+[32m+[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <header id="headerBox">[m
+[32m+[m[32m        <h1>CAJERO ONLINE ver1.0</h1>[m
+[32m+[m[32m    </header>[m
+[32m+[m[32m    <div id="asidesBox">[m
+[32m+[m[32m        <main>[m
+[32m+[m[32m            <section id="principalBox">[m
+[32m+[m[32m                <div id="principalFormBox">[m
+[32m+[m[32m                    <div id="titleBox">[m
+[32m+[m[32m                        <h2>Bienvenido al Sistema de Cajero Online</h2>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div id="titleBox2">[m
+[32m+[m[32m                        <h2>Por favor ingrese sus credenciales:</h2>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div id="formBox">[m
+[32m+[m[32m                        <form id="formInput">[m
+[32m+[m[32m                            <input type="text" id="user" placeholder="Ingresa tu usuario">[m
+[32m+[m[32m                            <input type="password" id="password" placeholder="Ingresa tu password">[m
+[32m+[m[32m                            <button type="submit" id="submitTXT">INGRESAR</button>[m
+[32m+[m[32m                            <!-- aca poner un timer para ocultar el formInput y meter el user o pass incorrecto -->[m
+[32m+[m[32m                        </form>[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <!-- <img src="./backgroundMattJjones.jpg" alt="background"> -->[m
+[32m+[m[32m            </section>[m
+[32m+[m[32m        </main>[m
+[32m+[m[32m        <footer>[m
+[32m+[m[32m            <p>Todos los derechos reservados </p>[m
+[32m+[m[32m        </footer>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <script src="./main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/main.js b/main.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06e6cf5[m
+[1m--- /dev/null[m
+[1m+++ b/main.js[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32mconst data = [[m
+[32m+[m[32m    {[m
+[32m+[m[32m        user: "salvador",[m
+[32m+[m[32m        pass: "123",[m
+[32m+[m[32m        money: 200[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        user: "miguel",[m
+[32m+[m[32m        pass: "123",[m
+[32m+[m[32m        money: 150[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        user: "ana",[m
+[32m+[m[32m        pass: "123",[m
+[32m+[m[32m        money: 100[m
+[32m+[m[32m    }[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m[32mconst formInput = document.getElementById("formInput")[m
+[32m+[m
+[32m+[m[32mformInput.addEventListener("submit",(evento)=>{[m
+[32m+[m[32m    evento.preventDefault();[m
+[32m+[m[32m    let user = document.getElementById("user").value[m
+[32m+[m[32m    let password = document.getElementById("password").value[m
+[32m+[m
+[32m+[m[32m    for (let index = 0; index < data.length; index++) {[m
+[32m+[m[32m        console.log(`index tiene este valor = ${index}`);[m
+[32m+[m[32m        if(data[index].user ===user && data[index].pass === password){[m
+[32m+[m[32m            localStorage.setItem("user", data[index].user)[m
+[32m+[m[32m            localStorage.setItem("money", data[index].money)[m
+[32m+[m[32m            console.log(data[index])[m
+[32m+[m[32m            window.location.href = "/cajero/cajero.html"[m
+[32m+[m[32m            break[m
+[32m+[m
+[32m+[m[32m        }else{[m
+[32m+[m[32m            console.log("Datos inc
